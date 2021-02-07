@@ -1,0 +1,27 @@
+este es el texto que yo he esmentado el enunciado a mi manera, el como yo lo he 
+ido entendiendo
+
+inmobiliaria -> vende Immobles["Pisos", "Locals"]
+    Immobles (direccion, m2, ref_catastral, coordenadas, nuevo(Boolean))
+         -> Pisos ([...], planta, puerta)
+         -> Locals ([...], numero_ventanas, persiana_metalica(boolean))
+    precio_immoble -> 10 < anyo_const_piso < 20 -> precio - precio*0,01
+    precio_immoble (piso) -> planta >= 3 precio + precio*0.03 (si        tiene      acensor)
+    precio_immoble (local) -> m2 > 50 precio + precio*0.01
+                           -> numero_ventanas < 2 precio - precio*0.02
+                           -> numero_ventanas < 4 precio + precio*0.02
+    
+    locals -> comercial (adaptadoParaPersonasImpedidas (boolean))
+           -> industrials (puertoCarga (boolean), sueloUrbano (boolean))
+                sueloUrbano == True     precio + precio*0.25
+           -> restauracion (extractorHumo, cafetera, muebles)
+    
+    
+    
+precioTOTAL piso = 
+        precio - 0.01(precio if (años - 10 > 0)) + 0.03(if(planta >= 3 && Acensor))
+        AA
+precioTOTAL local = 
+        precio + 0.01(precio if (m2 > 50)) 
+        + (precio*0.02 if (ventanas > 4) -precio*0.02 if(ventanas< 2)) 
+        + precio*0.25(if (sueloUrbano ==true))

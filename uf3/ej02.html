@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ej02</title>
+</head>
+<body>
+    <img src="https://placeimg.com/640/480/animals" id="imagen">
+    <button id="butt">Canviar imagen</button>
+</body>
+<script>
+    var imagen = document.getElementById("imagen");
+    var butt = document.getElementById("butt");
+    butt.addEventListener("click", function(){
+        console.log("aaaaa");
+        document.getElementById("imagen").src = "https://placeimg.com/640/480/animals";
+    })
+</script>
+</html>

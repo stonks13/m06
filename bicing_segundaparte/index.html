@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <style>
+       
+   </style>
+</head>
+<body>
+    <div id="mapid" style="height: 500px;"></div>
+</body>
+<script>
+    var map = L.map('mapid').setView([41.3947688, 2.0787285], 12);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map); 
+
+    var data = null;
+
+    var xhr = new XMLHttpRequest();
+
+    xhr.addEventListener("readystatechange", function(){  
+        if (this.readyState == this.DONE) {
+            console.log(typeof(this.responseText));
+            console.log(typeof(JSON.parse(this.responseText)));
+        }
+        var elMeuarray = JSON.parse(this.responseText);
+        var estaciones = elMeuarray.result.records;
+
+        for(var i = 0; i<estaciones.length; i++){
+        if (estaciones[i].bikes < 5){
+            L.circle([41.31, 2.08], {color: "#FF0000", radius: 400}).addTo(map);
+        } else if (estaciones[i].bikes < 10){
+            L.circle([41.31, 2.18], {color: "#FF0000", radius: 400}).addTo(map);
+        } else if (estaciones[i].bikes < 20){
+            L.circle([41.31, 2.28], {color: "#FF0000", radius: 400}).addTo(map);
+        } else {
+            L.circle([41.31, 2.38], {color: "#FF0000", radius: 400}).addTo(map);
+        }
+        console.log(i + "  Estacion: " + bikes_disponibles[i].streetName + "  Latitud: " + bikes_disponibles[i].latitude + "  Longitud: " + bikes_disponibles[i].longitude);
+    }
+        
+    });
+
+    xhr.open("GET", "https://opendata-ajuntament.barcelona.cat/data/api/action/datastore_search?resource_id=f59e276c-1a1e-4fa5-8c89-8a8a56e56b34");
+
+    xhr.send(data);
+    /*for(var i = 0; i<estaciones.length; i++){
+        if (estaciones[i].bikes < 5){
+            L.circle([41.31, 2.08], {color: "#FF0000", radius: 400}).addTo(map);
+        } else if (estaciones[i].bikes < 10){
+            L.circle([41.31, 2.18], {color: "#FF0000", radius: 400}).addTo(map);
+        } else if (estaciones[i].bikes < 20){
+            L.circle([41.31, 2.28], {color: "#FF0000", radius: 400}).addTo(map);
+        } else {
+            L.circle([41.31, 2.38], {color: "#FF0000", radius: 400}).addTo(map);
+        }
+        console.log(i + "  Estacion: " + bikes_disponibles[i].streetName + "  Latitud: " + bikes_disponibles[i].latitude + "  Longitud: " + bikes_disponibles[i].longitude);
+    }
+
+    
+    
+    /*var map = L.map('mapid').setView([41.3947688, 2.0787285], 12);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);*/
+
+    L.circle([41.31, 2.08], {color: "#FF0000", radius: 400}).addTo(map);
+    L.circle([41.31, 2.18], {color: "#FF0000", radius: 400}).addTo(map);
+    L.circle([41.31, 2.28], {color: "#FF0000", radius: 400}).addTo(map);
+    
+    
+</script>
+</html>

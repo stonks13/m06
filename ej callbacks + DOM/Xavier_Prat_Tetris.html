@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tetris ITB edidtion</title>
+    <style>
+        .cuadrat {
+            border: 1px solid black;
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            margin: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="0_0" class="cuadrat"></div>
+    <div id="0_1" class="cuadrat"></div>
+    <div id="0_2" class="cuadrat"></div>
+    <div id="0_3" class="cuadrat"></div>
+    <div id="0_4" class="cuadrat"></div>
+    <div id="0_5" class="cuadrat"></div>
+    <div id="0_6" class="cuadrat"></div>
+    <div id="0_7" class="cuadrat"></div>
+    <div id="0_8" class="cuadrat"></div>
+    <div id="0_9" class="cuadrat"></div>
+    <br />
+    <div id="1_0" class="cuadrat"></div>
+    <div id="1_1" class="cuadrat"></div>
+    <div id="1_2" class="cuadrat"></div>
+    <div id="1_3" class="cuadrat"></div>
+    <div id="1_4" class="cuadrat"></div>
+    <div id="1_5" class="cuadrat"></div>
+    <div id="1_6" class="cuadrat"></div>
+    <div id="1_7" class="cuadrat"></div>
+    <div id="1_8" class="cuadrat"></div>
+    <div id="1_9" class="cuadrat"></div>
+    <br />
+    <div id="2_0" class="cuadrat"></div>
+    <div id="2_1" class="cuadrat"></div>
+    <div id="2_2" class="cuadrat"></div>
+    <div id="2_3" class="cuadrat"></div>
+    <div id="2_4" class="cuadrat"></div>
+    <div id="2_5" class="cuadrat"></div>
+    <div id="2_6" class="cuadrat"></div>
+    <div id="2_7" class="cuadrat"></div>
+    <div id="2_8" class="cuadrat"></div>
+    <div id="2_9" class="cuadrat"></div>
+    <br />
+    <div id="3_0" class="cuadrat"></div>
+    <div id="3_1" class="cuadrat"></div>
+    <div id="3_2" class="cuadrat"></div>
+    <div id="3_3" class="cuadrat"></div>
+    <div id="3_4" class="cuadrat"></div>
+    <div id="3_5" class="cuadrat"></div>
+    <div id="3_6" class="cuadrat"></div>
+    <div id="3_7" class="cuadrat"></div>
+    <div id="3_8" class="cuadrat"></div>
+    <div id="3_9" class="cuadrat"></div>
+    <br />
+    <div id="4_0" class="cuadrat"></div>
+    <div id="4_1" class="cuadrat"></div>
+    <div id="4_2" class="cuadrat"></div>
+    <div id="4_3" class="cuadrat"></div>
+    <div id="4_4" class="cuadrat"></div>
+    <div id="4_5" class="cuadrat"></div>
+    <div id="4_6" class="cuadrat"></div>
+    <div id="4_7" class="cuadrat"></div>
+    <div id="4_8" class="cuadrat"></div>
+    <div id="4_9" class="cuadrat"></div>
+    <br />
+    <div id="5_0" class="cuadrat"></div>
+    <div id="5_1" class="cuadrat"></div>
+    <div id="5_2" class="cuadrat"></div>
+    <div id="5_3" class="cuadrat"></div>
+    <div id="5_4" class="cuadrat"></div>
+    <div id="5_5" class="cuadrat"></div>
+    <div id="5_6" class="cuadrat"></div>
+    <div id="5_7" class="cuadrat"></div>
+    <div id="5_8" class="cuadrat"></div>
+    <div id="5_9" class="cuadrat"></div>
+    <br />
+    <div id="6_0" class="cuadrat"></div>
+    <div id="6_1" class="cuadrat"></div>
+    <div id="6_2" class="cuadrat"></div>
+    <div id="6_3" class="cuadrat"></div>
+    <div id="6_4" class="cuadrat"></div>
+    <div id="6_5" class="cuadrat"></div>
+    <div id="6_6" class="cuadrat"></div>
+    <div id="6_7" class="cuadrat"></div>
+    <div id="6_8" class="cuadrat"></div>
+    <div id="6_9" class="cuadrat"></div>
+    <br />
+    <div id="7_0" class="cuadrat"></div>
+    <div id="7_1" class="cuadrat"></div>
+    <div id="7_2" class="cuadrat"></div>
+    <div id="7_3" class="cuadrat"></div>
+    <div id="7_4" class="cuadrat"></div>
+    <div id="7_5" class="cuadrat"></div>
+    <div id="7_6" class="cuadrat"></div>
+    <div id="7_7" class="cuadrat"></div>
+    <div id="7_8" class="cuadrat"></div>
+    <div id="7_9" class="cuadrat"></div>
+    <br />
+    <div id="8_0" class="cuadrat"></div>
+    <div id="8_1" class="cuadrat"></div>
+    <div id="8_2" class="cuadrat"></div>
+    <div id="8_3" class="cuadrat"></div>
+    <div id="8_4" class="cuadrat"></div>
+    <div id="8_5" class="cuadrat"></div>
+    <div id="8_6" class="cuadrat"></div>
+    <div id="8_7" class="cuadrat"></div>
+    <div id="8_8" class="cuadrat"></div>
+    <div id="8_9" class="cuadrat"></div>
+    <br />
+    <div id="9_0" class="cuadrat"></div>
+    <div id="9_1" class="cuadrat"></div>
+    <div id="9_2" class="cuadrat"></div>
+    <div id="9_3" class="cuadrat"></div>
+    <div id="9_4" class="cuadrat"></div>
+    <div id="9_5" class="cuadrat"></div>
+    <div id="9_6" class="cuadrat"></div>
+    <div id="9_7" class="cuadrat"></div>
+    <div id="9_8" class="cuadrat"></div>
+    <div id="9_9" class="cuadrat"></div>
+    <br />
+    <div id="10_0" class="cuadrat"></div>
+    <div id="10_1" class="cuadrat"></div>
+    <div id="10_2" class="cuadrat"></div>
+    <div id="10_3" class="cuadrat"></div>
+    <div id="10_4" class="cuadrat"></div>
+    <div id="10_5" class="cuadrat"></div>
+    <div id="10_6" class="cuadrat"></div>
+    <div id="10_7" class="cuadrat"></div>
+    <div id="10_8" class="cuadrat"></div>
+    <div id="10_9" class="cuadrat"></div>
+    <br />
+    <div id="11_0" class="cuadrat"></div>
+    <div id="11_1" class="cuadrat"></div>
+    <div id="11_2" class="cuadrat"></div>
+    <div id="11_3" class="cuadrat"></div>
+    <div id="11_4" class="cuadrat"></div>
+    <div id="11_5" class="cuadrat"></div>
+    <div id="11_6" class="cuadrat"></div>
+    <div id="11_7" class="cuadrat"></div>
+    <div id="11_8" class="cuadrat"></div>
+    <div id="11_9" class="cuadrat"></div>
+    <br />
+    <div id="12_0" class="cuadrat"></div>
+    <div id="12_1" class="cuadrat"></div>
+    <div id="12_2" class="cuadrat"></div>
+    <div id="12_3" class="cuadrat"></div>
+    <div id="12_4" class="cuadrat"></div>
+    <div id="12_5" class="cuadrat"></div>
+    <div id="12_6" class="cuadrat"></div>
+    <div id="12_7" class="cuadrat"></div>
+    <div id="12_8" class="cuadrat"></div>
+    <div id="12_9" class="cuadrat"></div>
+    <br />
+    <div id="13_0" class="cuadrat"></div>
+    <div id="13_1" class="cuadrat"></div>
+    <div id="13_2" class="cuadrat"></div>
+    <div id="13_3" class="cuadrat"></div>
+    <div id="13_4" class="cuadrat"></div>
+    <div id="13_5" class="cuadrat"></div>
+    <div id="13_6" class="cuadrat"></div>
+    <div id="13_7" class="cuadrat"></div>
+    <div id="13_8" class="cuadrat"></div>
+    <div id="13_9" class="cuadrat"></div>
+    <br />
+    <div id="14_0" class="cuadrat"></div>
+    <div id="14_1" class="cuadrat"></div>
+    <div id="14_2" class="cuadrat"></div>
+    <div id="14_3" class="cuadrat"></div>
+    <div id="14_4" class="cuadrat"></div>
+    <div id="14_5" class="cuadrat"></div>
+    <div id="14_6" class="cuadrat"></div>
+    <div id="14_7" class="cuadrat"></div>
+    <div id="14_8" class="cuadrat"></div>
+    <div id="14_9" class="cuadrat"></div>
+    <br />
+    <div id="15_0" class="cuadrat"></div>
+    <div id="15_1" class="cuadrat"></div>
+    <div id="15_2" class="cuadrat"></div>
+    <div id="15_3" class="cuadrat"></div>
+    <div id="15_4" class="cuadrat"></div>
+    <div id="15_5" class="cuadrat"></div>
+    <div id="15_6" class="cuadrat"></div>
+    <div id="15_7" class="cuadrat"></div>
+    <div id="15_8" class="cuadrat"></div>
+    <div id="15_9" class="cuadrat"></div>
+    <br />
+    <div id="16_0" class="cuadrat"></div>
+    <div id="16_1" class="cuadrat"></div>
+    <div id="16_2" class="cuadrat"></div>
+    <div id="16_3" class="cuadrat"></div>
+    <div id="16_4" class="cuadrat"></div>
+    <div id="16_5" class="cuadrat"></div>
+    <div id="16_6" class="cuadrat"></div>
+    <div id="16_7" class="cuadrat"></div>
+    <div id="16_8" class="cuadrat"></div>
+    <div id="16_9" class="cuadrat"></div>
+    <br />
+    <div id="17_0" class="cuadrat"></div>
+    <div id="17_1" class="cuadrat"></div>
+    <div id="17_2" class="cuadrat"></div>
+    <div id="17_3" class="cuadrat"></div>
+    <div id="17_4" class="cuadrat"></div>
+    <div id="17_5" class="cuadrat"></div>
+    <div id="17_6" class="cuadrat"></div>
+    <div id="17_7" class="cuadrat"></div>
+    <div id="17_8" class="cuadrat"></div>
+    <div id="17_9" class="cuadrat"></div>
+    <br />
+    <div id="18_0" class="cuadrat"></div>
+    <div id="18_1" class="cuadrat"></div>
+    <div id="18_2" class="cuadrat"></div>
+    <div id="18_3" class="cuadrat"></div>
+    <div id="18_4" class="cuadrat"></div>
+    <div id="18_5" class="cuadrat"></div>
+    <div id="18_6" class="cuadrat"></div>
+    <div id="18_7" class="cuadrat"></div>
+    <div id="18_8" class="cuadrat"></div>
+    <div id="18_9" class="cuadrat"></div>
+    <br />
+    <div id="19_0" class="cuadrat"></div>
+    <div id="19_1" class="cuadrat"></div>
+    <div id="19_2" class="cuadrat"></div>
+    <div id="19_3" class="cuadrat"></div>
+    <div id="19_4" class="cuadrat"></div>
+    <div id="19_5" class="cuadrat"></div>
+    <div id="19_6" class="cuadrat"></div>
+    <div id="19_7" class="cuadrat"></div>
+    <div id="19_8" class="cuadrat"></div>
+    <div id="19_9" class="cuadrat"></div>
+</body>
+<script>
+  
+    class Tauler {
+
+        fitxa;
+        caselles = [[], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], []];
+
+        constructor(lFitxa) {
+            this.fitxa = lFitxa;
+            for (let fila = 0; fila <= 9; fila++) {
+                for (let columna = 0; columna <= 19; columna++) {
+                    this.caselles[columna][fila] = document.getElementById(columna + "_" + fila);
+                    this.caselles[columna][fila].style.background = "white";
+                }
+            }
+
+            var self = this;
+            setInterval(function () {
+                //self.fitxa.borrar();
+                self.fitxa.baixar();
+                if (self.fitxa.aturada) {
+                    self.comprovaFila();
+                    delete self.fitxa;
+                    self.setFitxa(new Fitxa());
+                }
+            }, 100);
+        }
+
+        comprovaFila(){
+            for(let fila=0; fila <=19; fila++){
+                let eliminar = true;
+                for(let columna=0; columna<=9; columna++){
+                    
+                    if( this.caselles[fila][columna].style.background == "white") {
+                        eliminar = false;
+                    }
+                }
+                if( eliminar ){
+                    this.eliminarFila(fila);
+                }
+
+            }
+        }
+
+        eliminarFila(localfila){
+            for(let fila = localfila ; fila>=0 ; fila--){
+                for( let columna=0; columna<=9; columna++){
+                    this.caselles[fila][columna].style.background = this.caselles[fila-1][columna].style.background;
+                }
+            } 
+        }
+
+        setFitxa(lFitxa){
+            this.fitxa = lFitxa;
+        }
+    }
+
+    class Fitxa {
+        fila = 0;
+        columna = 4;
+        aturada;
+        color;
+        pieza;
+        constructor() {
+            this.aturada = false;
+            this.color = this.getRandomColor();
+            this.pieza = this.getRandomPieza();
+        }
+
+        borrar() {
+            document.getElementById(this.fila + "_" + this.columna).style.background = "white";
+        }
+
+        dibuixar() {
+            document.getElementById(this.fila + "_" + this.columna).style.background = this.color;
+        }
+
+        getRandomColor() {
+            var letters = '0123456789ABCDEF';
+            var color = '#';
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+        getRandomPieza(){
+            var piezas = ["Barra", "Ele", "EleInvertida", "Ese", "EseInvertida", "Cuadrado"];
+            console.log(Math.floor(Math.random() * 6));
+            return piezas[0];
+        }
+
+
+        baixar() {
+            if (this.fila == 19) {
+                this.aturada = true;
+                return;
+            }
+            if( miTauler.caselles[this.fila+1][this.columna].style.background != "white" ){
+                this.aturada = true;
+                return;
+            }
+            this.borrar();
+            this.fila++;
+            this.dibuixar();
+        }
+        
+        dreta() {
+            if (this.columna >= 9) {
+                return;
+            }
+            if( miTauler.caselles[this.fila][this.columna+1].style.background == "white" ){
+                this.borrar(); 
+                this.columna++;
+                this.dibuixar(); 
+            }
+            // this.borrar();
+            // if (this.columna < 9) {
+            //     this.columna++;
+            // }
+        }
+        esquerra() {
+            if(this.columna <= 0){
+                return;
+            }
+            if( miTauler.caselles[this.fila][this.columna-1].style.background == "white"){
+                this.borrar();
+                this.columna--;
+                this.dibuixar();
+            }
+            // this.borrar();
+            // if (this.columna > 0) {
+            //     this.columna--;
+            // }
+        }
+    }
+    class Linea extends Fitxa{
+        fila = 0;
+        columna = 4;
+        mapeo = [] 
+
+        dibuixar() {
+            console.log(this.fila + "_" + this.columna+1);
+            document.getElementById(this.fila + "_" + this.columna).style.background = this.color;
+            document.getElementById(this.fila + "_" + (this.columna+1)).style.background = this.color;
+            document.getElementById(this.fila + "_" + (this.columna+2)).style.background = this.color;
+            document.getElementById(this.fila + "_" + (this.columna+3)).style.background = this.color;
+        }
+
+        borrar() {
+            document.getElementById(this.fila + "_" + this.columna).style.background = "white";
+            document.getElementById(this.fila + "_" + (this.columna+1)).style.background = "white";
+            document.getElementById(this.fila + "_" + (this.columna+2)).style.background = "white";
+            document.getElementById(this.fila + "_" + (this.columna+3)).style.background = "white";
+        }
+    }
+
+
+  
+    //miFitxa.dibuixar();
+    miTauler = new Tauler( new Fitxa() );
+    //miTauler.clear();
+
+    document.addEventListener('keydown', (event) => {
+        const keyName = event.key;
+        if (keyName == "ArrowRight") {
+            miTauler.fitxa.dreta();
+            miTauler.fitxa.dibuixar();
+        }
+        if (keyName == "ArrowLeft") {
+            miTauler.fitxa.esquerra();
+            miTauler.fitxa.dibuixar();
+        }
+    },true);
+    
+  
+</script>
+
+</html>

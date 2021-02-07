@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<style>
+    .inputs {
+        width: 20px;
+        
+    }
+</style>
+<body>
+    <h1>Descargando información...</h1>
+    <div id="contenedor">
+        <input class="inputs" type="text" id="item0" readonly>
+        <input class="inputs" type="text" id="item1" readonly>
+        <input class="inputs" type="text" id="item2" readonly>
+        <input class="inputs" type="text" id="item3" readonly>
+        <input class="inputs" type="text" id="item4" readonly>
+        <input class="inputs" type="text" id="item5" readonly>
+        <input class="inputs" type="text" id="item6" readonly>
+        <input class="inputs" type="text" id="item7" readonly>
+        <input class="inputs" type="text" id="item8" readonly>
+        <input class="inputs" type="text" id="item9" readonly>    
+    </div>
+</body>
+<script>
+    
+    
+
+    var i = 0;
+    
+    setInterval(function(){
+        var itemTime = "item" + i;
+        document.getElementById(itemTime).style.backgroundColor="blue";
+        setTimeout(function(){document.getElementById(itemTime).style.backgroundColor="white";}, 500);
+        if (i==9){
+            i=-1;
+        }
+        i++;
+        
+    }, 500);
+    
+        
+    
+</script>
+</html>

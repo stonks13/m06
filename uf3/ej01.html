@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej01 XavierPrat7e3</title>
+    <style>
+        div {
+            height: 150px;
+            width: 300px;
+            background-color: red;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="cuadro">
+        <button id="boton">Dispara</button>
+    </div>
+</body>
+<script>
+    var div = document.getElementById("cuadro");
+    var boton = document.getElementById("boton");
+
+    div.addEventListener("click", function(){
+        console.log("cuadro");
+    })
+    boton.addEventListener("click", function(event){
+        console.log("boton");
+        event.stopPropagation();
+    });
+</script>
+</html>
